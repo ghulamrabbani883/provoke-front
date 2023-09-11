@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Login from "./components/Login.jsx";
@@ -9,8 +9,8 @@ import Plans from "./components/Plans.jsx";
 import Payment from "./components/Payment.jsx";
 import Success from "./components/Success.jsx";
 import Cancel from "./components/Cancel.jsx";
-import SecureRoute from "./utils/secureRoute.jsx";
 import Porfile from "./components/Porfile.jsx";
+import SecureRoute from "./utils/secureRoute.jsx";
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(false);
