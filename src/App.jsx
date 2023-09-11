@@ -36,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+export const BASE_URL = "https://provoke-backend.vercel.app"

@@ -13,7 +13,7 @@ const Plans = () => {
 
   const fetchProducts = async () => {
     const { data } = await axios.get(
-      `http://localhost:4000/product/all/${interval}`,
+      `${BASE_URL}/product/all/${interval}`,
       { withCredentials: true }
     );
     console.log(data);

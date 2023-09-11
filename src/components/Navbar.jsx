@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../App";
 
 const Navbar = ({isLogin, setIsLogin}) => {
   const navigate = useNavigate()
   const logOut = async ()=>{
-    const {data} = await axios.get('http://localhost:4000/user/logout', { withCredentials: true })
+    const {data} = await axios.get( BASE_URL + '/user/logout', { withCredentials: true })
     if(data.success){
       alert(data.message)
       setIsLogin(false)

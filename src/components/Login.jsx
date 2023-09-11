@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { BASE_URL } from "../App";
 
 const Login = ({isLogin, setIsLogin}) => {
   const [loginData, setLoginData] = useState({
@@ -20,7 +21,7 @@ const Login = ({isLogin, setIsLogin}) => {
     const config = { withCredentials: true };
 
     const { data } = await axios.post(
-      "http://localhost:4000/user/login",
+      BASE_URL+"/user/login",
       loginData,
       config
     );

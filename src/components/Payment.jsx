@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { redirect, useNavigate, useParams } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
+import { BASE_URL } from "../App";
 
 const Payment = () => {
   const { planId } = useParams();
@@ -9,7 +10,7 @@ const Payment = () => {
   const [plan, setPlan] = useState({});
   const fetchPlan = async () => {
     const { data } = await axios.get(
-      `http://localhost:4000/product/product/${planId}`,
+      `${BASE_URL}/product/product/${planId}`,
       { withCredentials: true }
     );
     if (data.product) {
@@ -28,7 +29,7 @@ const Payment = () => {
     );
 
     const { data } = await axios.post(
-      "http://localhost:4000/product/create-checkout-session",
+      BASE_URL + "/product/create-checkout-session",
       plan,
       { withCredentials: true }
     );
