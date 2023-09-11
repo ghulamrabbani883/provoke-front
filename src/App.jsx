@@ -10,7 +10,7 @@ import Payment from "./components/Payment.jsx";
 import Success from "./components/Success.jsx";
 import Cancel from "./components/Cancel.jsx";
 import Porfile from "./components/Porfile.jsx";
-import SecureRoute from "./utils/secureRoute.jsx";
+import SecureRoute from "./components/SecureRoute.jsx";
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(false);
